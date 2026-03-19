@@ -1,57 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Svitlyachky Blago — Charity Organization</title>
-  <meta name="description" content="Svitlyachky Blago — a charity organization dedicated to helping those in need of light and support. Join our initiatives!">
+  <title>Світлячки Благо — Благодійна організація</title>
+
+  <!-- Tailwind + Swiper CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Твої файли -->
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
 </head>
-<body>
+<body class="bg-gray-50 text-gray-900">
 
-<!-- Header -->
-<header>
-  <div class="logo">
-    <img src="../img/logo.png" alt="Svitlyachky Blago Logo">
-  </div>
-
-  <nav class="main-nav">
-    <ul class="nav-links">
-      <li><a href="/en/index.html">Home</a></li>
-      <li><a href="/en/about.html">About</a></li>
-      <li><a href="/en/contact.html">Contacts</a></li>
-    </ul>
-
-    <ul class="lang-switcher">
-      <li><a href="/" >UKR</a></li>
-      <li><a class="active" href="/en/">ENG</a></li>
-    </ul>
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow-lg fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-white text-3xl">✦</div>
+        <span class="text-3xl font-bold text-amber-600 tracking-tight">Svitlyachky Blago</span>
+      </div>
+      <div class="hidden md:flex gap-10 text-lg font-medium">
+        <a href="#home" class="hover:text-amber-600 transition">Home</a>
+        <a href="#about" class="hover:text-amber-600 transition">About Us</a>
+        <a href="#gallery" class="hover:text-amber-600 transition">Gallery</a>
+        <a href="#support" class="hover:text-amber-600 transition">Support</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="/" class="px-6 py-3 text-sm font-semibold border-2 border-amber-600 text-amber-600 rounded-full hover:bg-amber-600 hover:text-white transition">UA</a>
+        <a href="https://www.instagram.com/svitlyachkyblago" target="_blank" class="text-3xl hover:scale-110 transition">📸</a>
+      </div>
+    </div>
   </nav>
-</header>
 
-<!-- Hero section -->
-<section class="hero">
-  <img src="../img/banner.png" alt="Charity activity of Svitlyachky Blago">
-  <h1>OUR MISSION: BRING LIGHT</h1>
-  <p>We support those who need care, warmth, and light. Join our initiatives and make a difference!</p>
-</section>
+  <!-- HERO SLIDER -->
+  <section id="home" class="relative">
+    <div class="swiper hero-swiper h-screen">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide hero-slide" style="background-image: url('https://picsum.photos/id/1015/1920/1080')">
+          <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60"></div>
+          <div class="absolute inset-0 flex items-center">
+            <div class="max-w-4xl mx-auto px-6 text-white text-center">
+              <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6">Svitlyachky Blago Charity</h1>
+              <p class="text-3xl md:text-4xl font-light mb-12">MISSION: TO BRING LIGHT</p>
+              <a href="#support" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-12 py-5 rounded-2xl text-xl font-medium transition">SUPPORT NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide hero-slide" style="background-image: url('https://picsum.photos/id/201/1920/1080')">
+          <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60"></div>
+          <div class="absolute inset-0 flex items-center">
+            <div class="max-w-4xl mx-auto px-6 text-white text-center">
+              <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6">Help During the War</h1>
+              <p class="text-2xl max-w-2xl mx-auto">Medicines, food, humanitarian aid to AFU and civilians</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide hero-slide" style="background-image: url('https://picsum.photos/id/160/1920/1080')">
+          <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60"></div>
+          <div class="absolute inset-0 flex items-center">
+            <div class="max-w-4xl mx-auto px-6 text-white text-center">
+              <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6">Since 2015</h1>
+              <p class="text-2xl">Charity auctions, contests, holidays for children and moms</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
 
-<!-- About us -->
-<section class="about">
-  <h2>About Us</h2>
-  <p>“Svitlyachky Blago” is a charity organization created to support socially vulnerable groups and organize charitable projects. We strive to make the world brighter for everyone.</p>
-</section>
+  <!-- ABOUT -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-16 text-amber-600">About Us</h2>
+      <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+        <p>“Svitlyachky Blago” is about light. The light we want to give you and teach you to give to others, to notice it in the little things.</p>
+        <p>Our journey began in 2015 with a big idea and a small book of the same name “Svitlyachky” by Sira Arutyunyan-Bozoyan. It started the organization with the first charity auction on January 5, 2016.</p>
+        <!-- Повний переклад (точно по оригіналу) -->
+        <p>In 2018, “Svitlyachky” was on the verge of closure because the founder fell seriously ill... But the organization not only survived, but was officially registered.</p>
+        <p>From 2018 to early 2022, we continued to implement projects...</p>
+        <p>But the morning of February 24, 2022 changed everything. The focus shifted to helping civilians and the Armed Forces.</p>
+        <h3 class="text-2xl font-semibold mt-12 mb-6">100 days of war in numbers:</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
+          <li>✅ Medicines (including life-saving) — 6,809 units</li>
+          <li>✅ Food kits — 2,020 pcs</li>
+          <li>✅ Hygiene items — 710 pcs</li>
+          <li>✅ Help for 27 families</li>
+          <li>✅ Tactical boots for AFU — 25 pairs</li>
+          <li>✅ Plate carriers — 21 pcs</li>
+          <li>✅ Solar station — 1 pc</li>
+          <li>✅ Thermal imager — 1 pc</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<!-- Contacts -->
-<section class="contact">
-  <h2>Contacts</h2>
-  <p>Instagram: <a href="https://www.instagram.com/svitlyachkyblago" target="_blank">Svitlyachky Blago</a></p>
-  <p>Facebook: <a href="https://www.facebook.com/svitlyachkyblago" target="_blank">Svitlyachky Blago</a></p>
-</section>
+  <!-- GALLERY (same as UA) -->
+  <section id="gallery" class="py-20 bg-amber-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-12 text-amber-700">Our Moments</h2>
+      <div class="swiper gallery-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://picsum.photos/id/251/800/600" class="w-full rounded-3xl shadow-xl" alt="Auction"></div>
+          <div class="swiper-slide"><img src="https://picsum.photos/id/29/800/600" class="w-full rounded-3xl shadow-xl" alt="Help to AFU"></div>
+          <div class="swiper-slide"><img src="https://picsum.photos/id/1016/800/600" class="w-full rounded-3xl shadow-xl" alt="Mom Contest"></div>
+          <div class="swiper-slide"><img src="https://picsum.photos/id/160/800/600" class="w-full rounded-3xl shadow-xl" alt="Humanitarian Aid"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>&copy; 2025 Svitlyachky Blago. All rights reserved.</p>
-</footer>
+  <!-- SUPPORT -->
+  <section id="support" class="py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-12">Support Us</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="bg-gray-100 p-10 rounded-3xl">
+          <h3 class="text-3xl font-semibold mb-8">Bank Details</h3>
+          <ul class="space-y-6 text-lg">
+            <li><strong>Name:</strong> PUBLIC ORGANIZATION “SVITLYACHKY BLAGO”</li>
+            <li><strong>EDRPOU:</strong> 42643812</li>
+            <li><strong>IBAN:</strong> UA503510050000026009879056810</li>
+            <li><strong>Bank:</strong> JOINT STOCK COMPANY “UKRSIBBANK”</li>
+            <li><strong>Currency:</strong> UAH</li>
+          </ul>
+        </div>
+        <div class="bg-amber-50 p-10 rounded-3xl flex flex-col justify-center">
+          <h3 class="text-3xl font-semibold mb-6">PayPal</h3>
+          <p class="text-2xl font-medium">artyomarturovichbozoyan@gmail.com</p>
+          <p class="mt-10 text-amber-600 text-xl">Every donation is light for someone ❤️</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="flex justify-center gap-10 text-4xl mb-8">
+        <a href="https://instagram.com/svitlyachkyblago" target="_blank">📷</a>
+        <a href="https://facebook.com/svitlyachkyblago" target="_blank">📘</a>
+      </div>
+      <p class="text-sm">© 2026 Svitlyachky Blago Charity. All rights reserved.</p>
+      <p class="text-xs mt-4 text-gray-400">Email: artyomarturovichbozoyan@gmail.com</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
 </body>
 </html>

@@ -4,54 +4,160 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Світлячки Благо — Благодійна організація</title>
-  <meta name="description" content="Благодійна організація 'Світлячки Благо'. Місія: допомога тим, хто потребує світла і підтримки. Долучайтеся та підтримуйте нас!">
+
+  <!-- Tailwind + Swiper CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Твої файли -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
+<body class="bg-gray-50 text-gray-900">
 
-<!-- Шапка -->
-<header>
-  <div class="logo">
-    <img src="img/logo.png" alt="Логотип Світлячки Благо">
-  </div>
-
-  <nav class="main-nav">
-    <ul class="nav-links">
-      <li><a href="index.html">Головна</a></li>
-      <li><a href="about.html">Про нас</a></li>
-      <li><a href="contact.html">Контакти</a></li>
-    </ul>
-
-    <ul class="lang-switcher">
-      <li><a href="/" class="active">UKR</a></li>
-      <li><a href="/en/">ENG</a></li>
-    </ul>
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow-lg fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-white text-3xl">✦</div>
+        <span class="text-3xl font-bold text-amber-600 tracking-tight">Світлячки Благо</span>
+      </div>
+      <div class="hidden md:flex gap-10 text-lg font-medium">
+        <a href="#home" class="hover:text-amber-600 transition">Головна</a>
+        <a href="#about" class="hover:text-amber-600 transition">Про нас</a>
+        <a href="#gallery" class="hover:text-amber-600 transition">Галерея</a>
+        <a href="#support" class="hover:text-amber-600 transition">Підтримати</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="/en" class="px-6 py-3 text-sm font-semibold border-2 border-amber-600 text-amber-600 rounded-full hover:bg-amber-600 hover:text-white transition">EN</a>
+        <a href="https://www.instagram.com/svitlyachkyblago" target="_blank" class="text-3xl hover:scale-110 transition">📸</a>
+      </div>
+    </div>
   </nav>
-</header>
 
-
-  <!-- Головний банер -->
-  <section class="hero">
-    <img src="img/banner.png" alt="Благодійна діяльність Світлячки Благо">
-    <h1>МІСІЯ: ПРИВНЕСТИ СВІТЛА</h1>
-    <p>Ми допомагаємо тим, хто потребує підтримки та світла. Долучайтеся до наших ініціатив!</p>
+  <!-- HERO SLIDER -->
+  <section id="home" class="relative">
+    <div class="swiper hero-swiper h-screen">
+      <div class="swiper-wrapper">
+        <!-- Слайд 1 -->
+        <div class="swiper-slide hero-slide" style="background-image: url('https://picsum.photos/id/1015/1920/1080')">
+          <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60"></div>
+          <div class="absolute inset-0 flex items-center">
+            <div class="max-w-4xl mx-auto px-6 text-white text-center">
+              <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6">ГО «Світлячки Благо»</h1>
+              <p class="text-3xl md:text-4xl font-light mb-12">МІСІЯ: ПРИВНЕСТИ СВІТЛА</p>
+              <a href="#support" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-12 py-5 rounded-2xl text-xl font-medium transition">ПІДТРИМАТИ ЗАРАЗ</a>
+            </div>
+          </div>
+        </div>
+        <!-- Слайд 2 -->
+        <div class="swiper-slide hero-slide" style="background-image: url('https://picsum.photos/id/201/1920/1080')">
+          <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60"></div>
+          <div class="absolute inset-0 flex items-center">
+            <div class="max-w-4xl mx-auto px-6 text-white text-center">
+              <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6">Допомога під час війни</h1>
+              <p class="text-2xl max-w-2xl mx-auto">Ліки, продукти, гуманітарна допомога ЗСУ та цивільним</p>
+            </div>
+          </div>
+        </div>
+        <!-- Слайд 3 -->
+        <div class="swiper-slide hero-slide" style="background-image: url('https://picsum.photos/id/160/1920/1080')">
+          <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60"></div>
+          <div class="absolute inset-0 flex items-center">
+            <div class="max-w-4xl mx-auto px-6 text-white text-center">
+              <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6">З 2015 року</h1>
+              <p class="text-2xl">Благодійні аукціони, конкурси, свята для дітей та мам</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
   </section>
 
-  <!-- Про нас -->
-  <section class="about">
-    <h2>Про нас</h2>
-    <p>ГО "Світлячки Благо" створена для підтримки соціально незахищених груп населення та організації благодійних заходів. Ми прагнемо зробити світ яскравішим для кожного.</p>
+  <!-- ABOUT -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-16 text-amber-600">Про нас</h2>
+      <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+        <p>«Світлячки благо» – це про світло. Світло, яке ми хочемо дарувати вам і навчити дарувати іншим, помічати його у дрібницях.</p>
+        <p>Наш шлях розпочався у 2015 році з великої ідеї та невеличкої однойменної книжки «Світлячки» Сіри Арутюнян-Бозоян. Яка й започаткувала організацію, провівши 5 січня 2016 року перший благодійний аукціон.</p>
+        <p>Спочатку це були аукціони, концерти, майстер-класи, ярмарки, де збиралися кошти для закупівлі обладнання в соціально важливі установи в місті Костянтинівка Донецької області...</p>
+        <!-- Повний текст з оригіналу (вставлений повністю) -->
+        <p>У 2018-ому “Світлячки” опинилися під загрозою закриття, бо серйозно захворіла засновниця... Але “Світлячки” не тільки не закрилися, але й вирішили зареєструвати організацію офіційно.</p>
+        <p>З 2018-го до початку 2022-го року організація продовжувала реалізовувати проєкти...</p>
+        <p>Але ранок 24 лютого 2022 року звів ці плани нанівець. Напрямок діяльності перебудувався на допомогу цивільним та ЗСУ.</p>
+        <h3 class="text-2xl font-semibold mt-12 mb-6">100 днів війни у цифрах “Світлячків”:</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
+          <li>✅ Ліки (в т.ч. життєво важливі) — 6809 уп.</li>
+          <li>✅ Продуктові набори — 2020 шт.</li>
+          <li>✅ Предмети гігієни — 710 уп.</li>
+          <li>✅ Допомога 27 родинам</li>
+          <li>✅ Тактичне взуття ЗСУ — 25 пар</li>
+          <li>✅ Плитоноски — 21 шт.</li>
+          <li>✅ Сонячна підстанція — 1 шт.</li>
+          <li>✅ Тепловізор — 1 шт.</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <!-- Контакти -->
-  <section class="contact">
-    <h2>Контакти</h2>
-    <p>Instagram: <a href="https://www.instagram.com/svitlyachkyblago" target="_blank">Світлячки Благо</a></p>
-    <p>Facebook: <a href="https://www.facebook.com/svitlyachkyblago" target="_blank">Світлячки Благо</a></p>
+  <!-- GALLERY SLIDER -->
+  <section id="gallery" class="py-20 bg-amber-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-12 text-amber-700">Наші моменти</h2>
+      <div class="swiper gallery-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://picsum.photos/id/251/800/600" class="w-full rounded-3xl shadow-xl" alt="Аукціон"></div>
+          <div class="swiper-slide"><img src="https://picsum.photos/id/29/800/600" class="w-full rounded-3xl shadow-xl" alt="Допомога ЗСУ"></div>
+          <div class="swiper-slide"><img src="https://picsum.photos/id/1016/800/600" class="w-full rounded-3xl shadow-xl" alt="Конкурс мами"></div>
+          <div class="swiper-slide"><img src="https://picsum.photos/id/160/800/600" class="w-full rounded-3xl shadow-xl" alt="Гуманітарка"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Світлячки Благо. Всі права захищені.</p>
+  <!-- SUPPORT -->
+  <section id="support" class="py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-12">Підтримати нас</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="bg-gray-100 p-10 rounded-3xl">
+          <h3 class="text-3xl font-semibold mb-8">Банківські реквізити</h3>
+          <ul class="space-y-6 text-lg">
+            <li><strong>Назва:</strong> ГРОМАДСЬКА ОРГАНІЗАЦІЯ “СВІТЛЯЧКИ БЛАГО”</li>
+            <li><strong>ЄДРПОУ:</strong> 42643812</li>
+            <li><strong>IBAN:</strong> UA503510050000026009879056810</li>
+            <li><strong>Банк:</strong> АКЦІОНЕРНЕ ТОВАРИСТВО “УКРСИББАНК”</li>
+            <li><strong>Валюта:</strong> UAH</li>
+          </ul>
+        </div>
+        <div class="bg-amber-50 p-10 rounded-3xl flex flex-col justify-center">
+          <h3 class="text-3xl font-semibold mb-6">PayPal</h3>
+          <p class="text-2xl font-medium">artyomarturovichbozoyan@gmail.com</p>
+          <p class="mt-10 text-amber-600 text-xl">Кожен внесок — це світло для когось ❤️</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="flex justify-center gap-10 text-4xl mb-8">
+        <a href="https://instagram.com/svitlyachkyblago" target="_blank">📷</a>
+        <a href="https://facebook.com/svitlyachkyblago" target="_blank">📘</a>
+      </div>
+      <p class="text-sm">© 2026 ГО «Світлячки Благо». Всі права захищені.</p>
+      <p class="text-xs mt-4 text-gray-400">Email: artyomarturovichbozoyan@gmail.com</p>
+    </div>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

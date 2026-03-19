@@ -1,171 +1,32 @@
-/* Общие стили */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background-color: #FFFCF5; /* мягкий светлый фон */
-  color: #333;
+/* css/style.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-slide {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 
-a {
-  text-decoration: none;
-  color: #ffbb00; /* теплый оранжевый акцент */
-}
-
-a:hover {
-  color: #FB9800;
-}
-
-/* Шапка */
-/* Общие стили шапки */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Логотип */
-header .logo img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* Основная навигация */
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-/* Ссылки меню */
-.nav-links {
-  display: flex;
-  gap: 25px;
-  list-style: none;
-}
-
-.nav-links a {
-  text-decoration: none;
-  font-size: 18px;
-  color: #333;
-  transition: 0.2s;
-}
-
-.nav-links a:hover {
-  color: #0049b1;
-}
-
-/* Переключение языков */
-.lang-switcher {
-  display: flex;
-  gap: 15px;
-  list-style: none;
-  border-left: 1px solid #ddd;
-  padding-left: 20px;
-}
-
-.lang-switcher a {
-  text-decoration: none;
-  font-size: 16px;
-  color: #666;
-  padding: 4px 10px;
-  border-radius: 6px;
-  transition: 0.2s;
-}
-
-/* Активный язык */
-.lang-switcher a.active {
-  background: #0049b1;
-  color: white;
-}
-
-/* Наведение */
-.lang-switcher a:hover {
-  background: #e7f3ff;
-  color: #0049b1;
-}
-
-/* Главный баннер */
-.hero {
-  text-align: center;
-  padding: 30px 20px;
-  background-color: #FEFEFE; /* новый мягкий фон */
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
-.hero img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-
-.hero h1 {
-  font-size: 2rem;
-  color: #ffbb00;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: auto;
-  color: #555;
-}
-
-/* Секции "Про нас" и "Контакти" */
-section {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-section h2 {
-  color: #FFB74D;
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-section p {
-  font-size: 1rem;
-  color: #444;
-}
-
-/* Контакты — ссылки на соцсети */
-section.contact a {
-  font-weight: bold;
-}
-
-/* Футер */
-footer {
-  text-align: center;
+.swiper-button-next,
+.swiper-button-prev {
+  color: #f59e0b !important;
+  background: rgba(255,255,255,0.9);
   padding: 20px;
-  background-color: #FFE0B2; /* светлый оранжевый фон */
-  color: #555;
-  font-size: 0.9rem;
+  border-radius: 9999px;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 15px;
-  }
+/* Фікс блоку "Підтримати" */
+.support-card {
+  transition: all 0.3s ease;
+}
+.support-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgb(245 158 11 / 0.25);
+}
 
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  section h2 {
-    font-size: 1.5rem;
-  }
+/* Додаткові покращення */
+.prose h3 {
+  color: #d97706;
 }
