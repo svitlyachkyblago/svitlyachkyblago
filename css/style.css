@@ -211,6 +211,84 @@ body {
     margin-bottom: 10px;
 }
 
+/* Donate Section */
+.donate {
+    background-color: #fff;
+}
+
+.donate-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.donate-info p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.donate-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.donate-card {
+    background: var(--light-color);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: var(--transition);
+}
+
+.donate-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.donate-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.donate-card h3 {
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.account-number {
+    display: block;
+    background: #e9e9e9;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    word-break: break-all;
+}
+
+.account-holder {
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #888;
+}
+
+/* Адаптив для донатов */
+@media (max-width: 992px) {
+    .donate-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .donate-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Footer */
 .footer {
     background: #111;
