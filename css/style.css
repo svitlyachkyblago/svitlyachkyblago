@@ -278,17 +278,6 @@ body {
     color: #888;
 }
 
-/* Адаптив для донатов */
-@media (max-width: 992px) {
-    .donate-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .donate-cards {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* Footer */
 .footer {
     background: #111;
@@ -368,7 +357,26 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .hero-content {
+        margin: 16px;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+}
+
+/* Адаптив для донатов */
+@media (max-width: 992px) {
+    .donate-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .donate-cards {
+        grid-template-columns: 1fr;
     }
 }
